@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Закрываем меню при клике вне его области
-        document.addEventListener("click", closeMenu);
-
-        navMenu.addEventListener("click", (e) => {
-            e.stopPropagation();
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+                closeMenu();
+            }
         });
 
         // Закрываем мобильное меню при переходе по ссылке (кроме самого дропдауна)

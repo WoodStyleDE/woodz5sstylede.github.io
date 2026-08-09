@@ -6,68 +6,27 @@
     <title>WoodStyle — Handgefertigte Holzprodukte & Brandmalerei</title>
     <meta name="description" content="Hochwertige handgefertigte Holzprodukte und individuelle Brandmalerei aus Deutschland. Einzigartige Schneidebretter, Untersetzer und Geschenke.">
     
-    <!-- Open Graph (для соцсетей и мессенджеров) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="WoodStyle — Handgefertigte Holzprodukte">
     <meta property="og:description" content="Handgefertigte Holzprodukte und individuelle Brandmalerei aus Deutschland.">
     <meta property="og:url" content="https://woodstyle.de/">
     <meta property="og:image" content="https://woodstyle.de/og-image.jpg">
 
-    <!-- Favicons -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-
-    <!-- SEO Microdata (JSON-LD Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeGoodsStore",
-      "name": "WoodStyle",
-      "image": "https://woodstyle.de/og-image.jpg",
-      "@id": "https://woodstyle.de",
-      "url": "https://woodstyle.de",
-      "telephone": "+4915232161777",
-      "priceRange": "€€",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Bahnhofstraße 11",
-        "addressLocality": "Weilburg",
-        "postalCode": "35781",
-        "addressCountry": "DE"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    }
-    </script>
 </head>
 <body>
 
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                WoodStyle
-            </a>
+            <a href="index.html" class="logo">WoodStyle</a>
 
-            <button class="burger-btn"
-                    id="burgerBtn"
-                    aria-label="Menü öffnen"
-                    aria-expanded="false">
+            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -75,11 +34,7 @@
 
             <nav class="nav-menu" id="navMenu">
                 <ul class="nav-list">
-                    <li>
-                        <a href="index.html" class="nav-link active">
-                            Startseite
-                        </a>
-                    </li>
+                    <li><a href="index.html" class="nav-link active">Startseite</a></li>
                     <li class="dropdown">
                         <a href="katalog.html" class="nav-link dropdown-toggle" aria-expanded="false">
                             Katalog ▼
@@ -101,14 +56,21 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1>Exklusive Holzarbeiten</h1>
-                <p>
-                    Einzigartige Schneidebretter, Dekorationen und individuelle Brandmalerei aus Holz.
-                </p>
-                <div class="buttons">
-                    <a href="katalog.html" class="btn">Zum Katalog</a>
-                    <a href="kontakt.html" class="btn btn-outline">Bestellung</a>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Handgemachte Brandmalerei &amp; Holzdesign</h1>
+                    <p>
+                        Einzigartige Porträts, Schneidebretter und Dekorationen mit Einbrennmotiv – das perfekte persönliche Geschenk.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="katalog.html" class="btn btn-primary">Katalog ansehen</a>
+                        <a href="https://wa.me/4915232161777" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Individuelle Anfrage</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-placeholder">
+                        <span>Foto Ihrer Brandmalerei</span>
+                    </div>
                 </div>
             </div>
         </section>

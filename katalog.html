@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog | WoodStyle - Handgefertigte Holzprodukte & Brandmalerei</title>
+    <title>Katalog | WoodStyle - Handgefertigte Holzprodukte &amp; Brandmalerei</title>
     <meta name="description" content="Entdecken Sie hochwertige Schneidebretter, stilvolle Untersetzer und individuelle Brandmalerei auf Holz. Handgefertigt in Deutschland.">
 
-    <!-- Favicons -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -32,14 +30,14 @@
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Startseite</a></li>
                     <li class="dropdown">
-                        <a href="katalog.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+                        <a href="katalog.html" class="nav-link active dropdown-toggle" aria-expanded="false">
                             Katalog ▼
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#schneidebretter">Schneidebretter</a></li>
-                            <li><a href="#untersetzer">Untersetzer</a></li>
-                            <li><a href="#bilder">Bilder &amp; Porträts</a></li>
-                            <li><a href="#sonstiges">Sonstiges</a></li>
+                            <li><a href="katalog.html#schneidebretter">Schneidebretter</a></li>
+                            <li><a href="katalog.html#untersetzer">Untersetzer</a></li>
+                            <li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li>
+                            <li><a href="katalog.html#sonstiges">Sonstiges</a></li>
                         </ul>
                     </li>
                     <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
@@ -50,44 +48,73 @@
         </div>
     </header>
 
-    <main>
-        <section class="section container">
-            <h2>Unser Katalog</h2>
-            <div class="features">
-                <div id="schneidebretter" class="feature-card">
-                    <h3>Schneidebretter</h3>
-                    <p>Hochwertige Schneidebretter aus Massivholz, ideal für Küche und Servieren.</p>
-                    <p class="price">ab 30 €</p>
-                    <div class="card-action">
-                        <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Schneidebretter." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+    <main class="section">
+        <div class="container">
+            <h1 class="section-title">Unser Katalog</h1>
+            <p class="section-subtitle">Jedes Stück ein Unikat: Handgefertigte Holzdesign-Produkte und individuelle Brandmalerei.</p>
+
+            <div class="catalog-grid">
+                <article id="schneidebretter" class="product-card">
+                    <div class="card-img-placeholder">
+                        <svg viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z"/></svg>
+                        <span>Foto Schneidebrett</span>
                     </div>
-                </div>
-                <div id="untersetzer" class="feature-card">
-                    <h3>Untersetzer</h3>
-                    <p>Stilvolle Holzuntersetzer für Tassen, Gläser und Töpfe.</p>
-                    <p class="price">ab 15 €</p>
-                    <div class="card-action">
-                        <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Untersetzer." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                    <div class="card-body">
+                        <h3>Schneidebretter</h3>
+                        <p>Massivholz-Schneidebretter aus hochwertigem Hartholz, langlebig und messerschonend verarbeitet.</p>
+                        <div class="card-footer">
+                            <span class="price">ab 25 €</span>
+                            <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Schneidebretter." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                        </div>
                     </div>
-                </div>
-                <div id="bilder" class="feature-card">
-                    <h3>Bilder &amp; Porträts (Brandmalerei)</h3>
-                    <p>Präzise Brandmalerei auf Holz nach Ihrem Lieblingsfoto.</p>
-                    <p class="price">ab 45 €</p>
-                    <div class="card-action">
-                        <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Brandmalerei." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                </article>
+
+                <article id="untersetzer" class="product-card">
+                    <div class="card-img-placeholder">
+                        <svg viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z"/></svg>
+                        <span>Foto Untersetzer</span>
                     </div>
-                </div>
-                <div id="sonstiges" class="feature-card">
-                    <h3>Sonstiges</h3>
-                    <p>Kreative Holzdekorationen, Schlüsselanhänger und Souvenirs.</p>
-                    <p class="price">ab 10 €</p>
-                    <div class="card-action">
-                        <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Holzdekorationen." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                    <div class="card-body">
+                        <h3>Untersetzer</h3>
+                        <p>Stilvolle Holz-Untersetzer für Gläser und Tassen, verziert mit feiner Laser- oder Brandgravur.</p>
+                        <div class="card-footer">
+                            <span class="price">ab 15 €</span>
+                            <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Untersetzer." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article id="bilder" class="product-card">
+                    <div class="card-img-placeholder">
+                        <svg viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z"/></svg>
+                        <span>Foto Brandmalerei</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Bilder &amp; Porträts</h3>
+                        <p>Präzise Brandmalerei auf edlem Holz nach Ihrer persönlichen Fotovorlage – das ideale Geschenk.</p>
+                        <div class="card-footer">
+                            <span class="price">ab 45 €</span>
+                            <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Brandmalerei." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sonstiges" class="product-card">
+                    <div class="card-img-placeholder">
+                        <svg viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z"/></svg>
+                        <span>Foto Dekoration</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Sonstiges</h3>
+                        <p>Kreative Holzdekorationen, individuelle Schlüsselanhänger und maßgefertigte Souvenirs.</p>
+                        <div class="card-footer">
+                            <span class="price">ab 10 €</span>
+                            <a href="https://wa.me/4915232161777?text=Hallo,%20ich%20interessiere%20mich%20f%C3%BCr%20Holzdekorationen." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">Jetzt anfragen</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
