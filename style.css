@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
 
 :root {
-  --bg-main: #0f0d0c;
+  --bg-main: #1c1917; /* Теплый темно-серый, как на скриншоте */
   --bg-dark: #11100f;
-  --bg-card: #181615;
-  --border-color: #2a2725;
+  --bg-card: #24211f; /* Карточки чуть светлее фона */
+  --border-color: #332f2c;
   
   --accent: #d37b52;
   --accent-hover: #b86842;
@@ -30,32 +30,31 @@
 html { scroll-behavior: smooth; }
 
 /* ==========================================
-   ОБНОВЛЕННЫЙ ФОН (Теплый темно-коричневый с кольцами)
+   ОБНОВЛЕННЫЙ ФОН (Светлее + явные кольца)
    ========================================== */
 body {
   font-family: var(--font-sans);
-  background-color: #1a1412; /* Теплый темно-коричневый (цвет темного дерева) */
+  background-color: var(--bg-main); 
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   
-  /* Многослойный фон: мягкая виньетка + два слоя колец дерева */
+  /* Многослойный фон: мягкое затемнение + два слоя колец */
   background-image: 
-    radial-gradient(ellipse at center, rgba(26, 20, 18, 0.2) 0%, rgba(13, 10, 9, 0.85) 100%),
+    radial-gradient(circle at center, rgba(28, 25, 23, 0.2) 0%, rgba(15, 13, 12, 0.8) 100%),
     repeating-radial-gradient(
       circle at 50% 50%,
       transparent 0,
-      transparent 30px,
-      rgba(211, 123, 82, 0.06) 31px,
-      rgba(211, 123, 82, 0.1) 32px,
-      transparent 33px
+      transparent 40px,
+      rgba(211, 123, 82, 0.08) 41px,
+      transparent 42px
     ),
     repeating-radial-gradient(
       circle at 50% 50%,
       transparent 0,
-      transparent 85px,
-      rgba(255, 255, 255, 0.02) 86px,
-      transparent 87px
+      transparent 120px,
+      rgba(211, 123, 82, 0.05) 121px,
+      transparent 122px
     );
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -73,7 +72,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
    ШАПКА И НАВИГАЦИЯ
    ========================================== */
 .navbar {
-  background-color: rgba(17, 16, 15, 0.95);
+  background-color: rgba(28, 25, 23, 0.95);
   backdrop-filter: blur(10px);
   position: sticky; top: 0; z-index: 1000;
   border-bottom: 1px solid var(--border-color);
@@ -106,7 +105,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   padding: 8px 16px; border-radius: 6px; transition: var(--transition);
 }
 
-.nav-link:hover, .nav-link.active { color: var(--text-main); background-color: #1f1c1a; }
+.nav-link:hover, .nav-link.active { color: var(--text-main); background-color: #2a2624; }
 .nav-cta .btn { padding: 10px 24px; font-size: 0.95rem; }
 
 .dropdown { position: relative; }
@@ -122,7 +121,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   text-decoration: none; font-size: 0.95rem; transition: var(--transition);
 }
 
-.dropdown-menu a:hover { background-color: #221e1b; color: var(--text-main); padding-left: 24px; }
+.dropdown-menu a:hover { background-color: #2f2b28; color: var(--text-main); padding-left: 24px; }
 
 @media (min-width: 851px) { .dropdown:hover .dropdown-menu { display: block; } }
 
@@ -232,7 +231,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 }
 
 .card-img-placeholder {
-  height: 180px; background-color: #141211; border-bottom: 1px solid var(--border-color);
+  height: 180px; background-color: #1a1816; border-bottom: 1px solid var(--border-color);
   display: flex; align-items: center; justify-content: center;
   background-image: repeating-radial-gradient(circle at center, transparent 0, transparent 20px, rgba(255,255,255,0.02) 21px, transparent 22px);
   overflow: hidden;
@@ -275,7 +274,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .contact-card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 .contact-card p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; }
 .contact-buttons-row { display: flex; gap: 16px; justify-content: center; margin-bottom: 32px; }
-.response-badge { display: inline-flex; align-items: center; gap: 10px; background-color: #221e1b; border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 30px; color: var(--text-muted); font-size: 0.9rem; }
+.response-badge { display: inline-flex; align-items: center; gap: 10px; background-color: #2a2624; border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 30px; color: var(--text-muted); font-size: 0.9rem; }
 .response-badge-dot { width: 8px; height: 8px; background-color: var(--whatsapp); border-radius: 50%; box-shadow: 0 0 8px var(--whatsapp); animation: pulse 2s infinite; }
 
 @keyframes pulse {
@@ -325,7 +324,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   
   .nav-menu {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
-    background-color: #1a1412; /* Под цвет основного фона */
+    background-color: var(--bg-main);
     padding: 100px 24px 40px;
     transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); z-index: 1001;
     overflow-y: auto;
@@ -348,7 +347,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   }
 
   .nav-link:hover, .nav-link.active {
-    background-color: #221e1b;
+    background-color: #2f2b28;
     border-color: var(--accent);
   }
 
