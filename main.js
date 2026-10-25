@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function closeMenu() {
         if (navMenu) navMenu.classList.remove("active");
-        if (burgerBtn) {
-            burgerBtn.classList.remove("active"); // Возвращаем полоски
-            burgerBtn.setAttribute("aria-expanded", "false");
-        }
+        if (burgerBtn) burgerBtn.setAttribute("aria-expanded", "false");
         const dropdown = document.querySelector(".dropdown");
         if (dropdown) dropdown.classList.remove("open");
         document.body.style.overflow = ""; 
@@ -17,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         burgerBtn.addEventListener("click", (e) => {
             e.stopPropagation();
             const isActive = navMenu.classList.toggle("active");
-            burgerBtn.classList.toggle("active"); // Включаем анимацию крестика
             document.body.style.overflow = isActive ? "hidden" : "";
             burgerBtn.setAttribute("aria-expanded", String(isActive));
         });

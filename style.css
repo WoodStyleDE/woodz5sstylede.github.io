@@ -44,7 +44,6 @@ body {
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Плавное появление контента */
 main { animation: fadeIn 0.4s ease-in-out forwards; }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
@@ -107,22 +106,16 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .dropdown-menu a:hover { background-color: #221e1b; color: var(--text-main); padding-left: 24px; }
 
 @media (min-width: 851px) { .dropdown:hover .dropdown-menu { display: block; } }
-.dropdown.open .dropdown-menu { display: block; }
 
-/* Бургер-кнопка и её анимация */
+/* Бургер-кнопка (без анимации в крестик) */
 .burger-btn {
-  display: none; flex-direction: column; justify-content: center; align-items: center;
-  width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; z-index: 1002; gap: 5px;
+  display: none; flex-direction: column; justify-content: space-between;
+  width: 30px; height: 20px; background: transparent; border: none; cursor: pointer; z-index: 1002;
 }
 .burger-btn span { 
   display: block; width: 100%; height: 2px; background-color: var(--text-main); 
-  border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; 
+  border-radius: 2px; 
 }
-
-/* Анимация превращения в крестик */
-.burger-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.burger-btn.active span:nth-child(2) { opacity: 0; }
-.burger-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ==========================================
    КНОПКИ
@@ -189,7 +182,6 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .section-title { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 600; text-align: center; margin-bottom: 16px; }
 .section-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 60px; max-width: 700px; margin-inline: auto; }
 
-/* ЖЕСТКОЕ ИСПРАВЛЕНИЕ ДЛЯ ЗАГОЛОВКОВ IMPRESSUM И DATENSCHUTZ */
 .section .container h2 {
   font-family: var(--font-serif) !important;
   font-size: 2.5rem !important;
@@ -208,7 +200,6 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
 }
 
-/* АНИМАЦИИ КАРТОЧЕК ТОВАРОВ */
 .product-card {
   background-color: var(--bg-card); border: 1px solid var(--border-color);
   border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;
@@ -242,7 +233,6 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .product-card:hover .card-body h3 { color: var(--accent); }
 .card-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
 
-/* Исправлено: добавлен flex-wrap, чтобы кнопка не пропадала на мобильных */
 .card-footer {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
   border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: auto;
@@ -319,19 +309,70 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
     background-color: var(--bg-main); padding: 100px 30px 30px;
     transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); z-index: 1001;
     overflow-y: auto;
+    overflow-x: hidden; /* Предотвращает горизонтальную прокрутку от анимации */
   }
   .nav-menu.active { right: 0; }
   
-  .nav-list { flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; }
-  .nav-link { font-size: 1.2rem; padding: 10px 0; width: 100%; }
-  .dropdown-menu { position: static; box-shadow: none; background-color: transparent; border: none; padding-left: 15px; margin-top: 10px; display: none; }
-  .dropdown.open .dropdown-menu { display: block; }
+  .nav-list { flex-direction: column; align-items: flex-start; gap: 0; width: 100%; }
+  
+  /* Обводка и разделители для главных пунктов */
+  .nav-link { 
+    font-size: 1.2rem; 
+    padding: 18px 0; 
+    width: 100%; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+    background-color: transparent !important;
+    color: var(--text-main);
+  }
+  
+  /* Настройка выпадающего меню для анимации справа налево */
+  .dropdown-menu { 
+    position: static; 
+    box-shadow: none; 
+    background-color: transparent; 
+    border: none; 
+    padding-left: 0; 
+    margin-top: 0; 
+    display: block; 
+    max-height: 0; 
+    overflow: hidden; 
+    opacity: 0; 
+    transform: translateX(30px); /* Начальная позиция справа */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* Состояние при открытии (выезд налево и обводка) */
+  .dropdown.open .dropdown-menu { 
+    max-height: 350px; 
+    opacity: 1; 
+    transform: translateX(0); /* Выезжает на место */
+    margin-top: 15px; 
+    padding-left: 15px; 
+    border-left: 2px solid var(--accent); /* Оранжевая обводка слева */
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Стили для ссылок внутри категорий */
+  .dropdown-menu a {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: rgba(211, 123, 82, 0.1);
+    color: var(--accent);
+    padding-left: 15px;
+  }
+
   .nav-cta { display: none; }
   .contact-buttons-row { flex-direction: column; }
   .hero-content h1 { font-size: 2.2rem; }
   .legal-content, .contact-card { padding: 30px 20px; }
   
-  /* На мобильных карточки товаров делаем кнопки на всю ширину */
   .card-footer { flex-direction: column; align-items: stretch; text-align: center; }
   .card-footer .price { margin-bottom: 8px; }
 }
