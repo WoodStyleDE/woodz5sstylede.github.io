@@ -1,8 +1,5 @@
 /* ==========================================
    ШРИФТЫ (локально, без обращения к серверам Google)
-   Playfair Display: скачайте woff2 (600 и 700, latin) например через
-   https://gwfh.mranftl.com/fonts/playfair-display , положите в /fonts
-   и раскомментируйте блоки ниже. Пока используется запасной Georgia.
    ========================================== */
 @font-face { font-family: 'Inter'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/inter-400.woff') format('woff'); }
 @font-face { font-family: 'Inter'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/inter-500.woff') format('woff'); }
@@ -42,7 +39,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
-/* Плавный переход между страницами без JS (браузеры без поддержки просто грузят страницу) */
+/* Плавный переход между страницами без JS */
 @view-transition { navigation: auto; }
 
 body {
@@ -78,7 +75,6 @@ img { max-width: 100%; height: auto; }
   border-bottom: 1px solid var(--border-color);
   view-transition-name: navbar;
 }
-/* blur вынесен в псевдоэлемент: backdrop-filter на самой шапке ломает position: fixed у мобильного меню */
 .navbar::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background-color: rgba(28, 25, 23, 0.95);
@@ -117,7 +113,6 @@ img { max-width: 100%; height: auto; }
   list-style: none; min-width: 220px; border-radius: var(--radius-md);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1001; padding: 8px 0; margin-top: 4px;
 }
-/* невидимый мостик, чтобы меню не закрывалось при движении мыши */
 .dropdown-menu::before { content: ""; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
 .dropdown-menu a {
   display: block; padding: 10px 20px; color: var(--text-muted);
@@ -138,7 +133,7 @@ img { max-width: 100%; height: auto; }
 .burger-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .burger-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-/* Сезонная полоса (удалить после праздников) */
+/* Сезонная полоса */
 .promo-strip {
   background-color: #2a1e17; border-bottom: 1px solid var(--border-color);
   text-align: center; padding: 10px 24px; font-size: 0.95rem;
@@ -224,8 +219,18 @@ img { max-width: 100%; height: auto; }
 .product-card:hover .card-body h3 { color: var(--accent); }
 .card-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
 
-.card-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: auto; }
-.price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent); font-weight: 600; }
+/* ИСПРАВЛЕНИЕ: убираем перенос строк, чтобы кнопка всегда была справа от цены на ПК */
+.card-footer { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: nowrap; /* Запрещаем перенос */
+  gap: 12px; 
+  border-top: 1px solid var(--border-color); 
+  padding-top: 20px; 
+  margin-top: auto; 
+}
+.price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent); font-weight: 600; white-space: nowrap; }
 
 /* ==========================================
    ОСТАЛЬНЫЕ БЛОКИ
@@ -357,7 +362,13 @@ img { max-width: 100%; height: auto; }
   .section-title { font-size: 2rem; }
   .legal-content, .contact-card { padding: 30px 20px; }
 
-  .card-footer { flex-direction: column; align-items: stretch; text-align: center; }
+  /* На мобильных кнопка под ценой */
+  .card-footer { 
+    flex-direction: column; 
+    align-items: stretch; 
+    text-align: center; 
+    flex-wrap: wrap; /* Возвращаем перенос для мобилок */
+  }
   .card-footer .price { margin-bottom: 8px; }
 }
 
