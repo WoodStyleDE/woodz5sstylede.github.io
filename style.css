@@ -117,10 +117,8 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 }
 .burger-btn span { width: 100%; height: 2px; background-color: var(--text-main); border-radius: 2px; transition: var(--transition); }
 
-/* СКРЫВАЕМ КРЕСТИК НА ДЕСКТОПЕ */
-.mobile-close-btn {
-  display: none;
-}
+/* ИСПРАВЛЕНИЕ: Скрываем крестик по умолчанию на десктопе */
+.mobile-close-btn { display: none; }
 
 /* ==========================================
    КНОПКИ
@@ -234,7 +232,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent); font-weight: 600; }
 
 /* ==========================================
-   ОСТАЛЬНЫЕ БЛОКИ (Преимущества, Контакты)
+   ОСТАЛЬНЫЕ БЛОКИ
    ========================================== */
 .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .benefit-item { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 40px 30px; text-align: center; transition: var(--transition); }
@@ -305,12 +303,18 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   }
   .nav-menu.active { right: 0; }
   
-  /* ПОКАЗЫВАЕМ КРЕСТИК ТОЛЬКО НА МОБИЛЬНЫХ */
+  /* Крестик появляется ТОЛЬКО на мобильных */
   .mobile-close-btn { 
     display: block; 
-    position: absolute; top: 25px; right: 25px; 
-    background: transparent; border: none; color: var(--text-main); 
-    font-size: 2.5rem; cursor: pointer; line-height: 1; 
+    position: absolute; 
+    top: 25px; 
+    right: 25px; 
+    background: transparent; 
+    border: none; 
+    color: var(--text-main); 
+    font-size: 2.5rem; 
+    cursor: pointer; 
+    line-height: 1; 
   }
   
   .nav-list { flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; }
