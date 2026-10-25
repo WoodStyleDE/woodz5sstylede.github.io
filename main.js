@@ -2,15 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerBtn = document.getElementById("burgerBtn");
     const navMenu = document.getElementById("navMenu");
     
-    // Создаем кнопку закрытия для мобильного меню (крестик)
-    const closeBtn = document.createElement("button");
-    closeBtn.className = "mobile-close-btn";
-    closeBtn.innerHTML = "&times;";
-    if (navMenu) navMenu.prepend(closeBtn);
-
     function closeMenu() {
         if (navMenu) navMenu.classList.remove("active");
-        if (burgerBtn) burgerBtn.setAttribute("aria-expanded", "false");
+        if (burgerBtn) {
+            burgerBtn.classList.remove("active"); // Возвращаем полоски
+            burgerBtn.setAttribute("aria-expanded", "false");
+        }
         const dropdown = document.querySelector(".dropdown");
         if (dropdown) dropdown.classList.remove("open");
         document.body.style.overflow = ""; 
@@ -19,10 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (burgerBtn && navMenu) {
         burgerBtn.addEventListener("click", (e) => {
             e.stopPropagation();
-            navMenu.classList.toggle("active");
-            document.body.style.overflow = navMenu.classList.contains("active") ? "hidden" : "";
+            const isActive = navMenu.classList.toggle("active");
+            burgerBtn.classList.toggle("active"); // Включаем анимацию крестика
+            document.body.style.overflow = isActive ? "hidden" : "";
+            burgerBtn.setAttribute("aria-expanded", String(isActive));
         });
-        closeBtn.addEventListener("click", closeMenu);
     }
 
     // Дропдаун в мобильном меню
@@ -37,27 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ==========================================
     // SPA: ПЕРЕХОД БЕЗ ПЕРЕЗАГРУЗКИ СТРАНИЦЫ
-    // ==========================================
     document.body.addEventListener("click", async (e) => {
         const link = e.target.closest("a");
         if (!link) return;
 
         const href = link.getAttribute("href");
         
-        // Игнорируем внешние ссылки, мессенджеры и пустые ссылки
         if (!href || href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel")) return;
-
-        // Если это якорная ссылка на этой же странице (например, #schneidebretter)
         if (href.startsWith("#")) return;
 
-        // Отделяем путь от хэша (katalog.html#schneidebretter)
         const urlParts = href.split("#");
         const targetPath = urlParts[0];
         const targetHash = urlParts.length > 1 ? `#${urlParts[1]}` : null;
 
-        // Если мы уже на этой странице, просто скроллим к якорю (если он есть)
         const currentPath = window.location.pathname.split("/").pop() || "index.html";
         if (currentPath === targetPath) {
             if (targetHash) {
@@ -68,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        e.preventDefault(); // Отменяем стандартную перезагрузку
+        e.preventDefault();
 
         try {
             const response = await fetch(targetPath);
@@ -83,16 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const currentMain = document.querySelector("main");
             
-            // Плавное исчезновение
             currentMain.style.opacity = "0";
             currentMain.style.transform = "translateY(10px)";
             
             setTimeout(() => {
-                // Подмена контента
                 currentMain.innerHTML = newMain;
                 document.title = newTitle;
                 
-                // Скролл к якорю или вверх
                 if (targetHash) {
                     const targetEl = document.querySelector(targetHash);
                     if (targetEl) {
@@ -104,28 +92,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
                 
-                // Плавное появление
                 currentMain.style.opacity = "1";
                 currentMain.style.transform = "translateY(0)";
             }, 200);
 
-            // Обновляем URL
             history.pushState(null, "", href);
 
-            // Обновляем активный класс в меню
             document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
             const activeLink = document.querySelector(`.nav-link[href^="${targetPath}"]`);
             if (activeLink) activeLink.classList.add("active");
 
-            closeMenu(); // Закрываем меню на мобилке
+            closeMenu();
 
         } catch (error) {
             console.error("Ошибка навигации:", error);
-            window.location.href = href; // Если что-то пошло не так, грузим страницу стандартно
+            window.location.href = href;
         }
     });
 
-    // Обработка кнопки "Назад" в браузере
     window.addEventListener("popstate", () => {
         window.location.reload();
     });

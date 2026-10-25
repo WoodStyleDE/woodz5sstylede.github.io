@@ -109,15 +109,20 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 @media (min-width: 851px) { .dropdown:hover .dropdown-menu { display: block; } }
 .dropdown.open .dropdown-menu { display: block; }
 
-/* Бургер */
+/* Бургер-кнопка и её анимация */
 .burger-btn {
-  display: none; flex-direction: column; justify-content: space-between;
-  width: 30px; height: 20px; background: transparent; border: none; cursor: pointer; z-index: 1002;
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; z-index: 1002; gap: 5px;
 }
-.burger-btn span { width: 100%; height: 2px; background-color: var(--text-main); border-radius: 2px; transition: var(--transition); }
+.burger-btn span { 
+  display: block; width: 100%; height: 2px; background-color: var(--text-main); 
+  border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; 
+}
 
-/* Жестко скрываем крестик на десктопе */
-.mobile-close-btn { display: none !important; }
+/* Анимация превращения в крестик */
+.burger-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-btn.active span:nth-child(2) { opacity: 0; }
+.burger-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ==========================================
    КНОПКИ
@@ -181,18 +186,19 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
    ========================================== */
 .section { padding: 80px 0; }
 
-/* Базовый класс для заголовков */
 .section-title { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 600; text-align: center; margin-bottom: 16px; }
 .section-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 60px; max-width: 700px; margin-inline: auto; }
 
 /* ЖЕСТКОЕ ИСПРАВЛЕНИЕ ДЛЯ ЗАГОЛОВКОВ IMPRESSUM И DATENSCHUTZ */
-.section h2 {
+.section .container h2 {
   font-family: var(--font-serif) !important;
   font-size: 2.5rem !important;
   font-weight: 600 !important;
   text-align: center !important;
-  margin-bottom: 40px !important;
+  margin: 0 auto 40px auto !important;
   color: var(--text-main) !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .catalog-grid {
@@ -236,8 +242,9 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 .product-card:hover .card-body h3 { color: var(--accent); }
 .card-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
 
+/* Исправлено: добавлен flex-wrap, чтобы кнопка не пропадала на мобильных */
 .card-footer {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
   border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: auto;
 }
 .price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent); font-weight: 600; }
@@ -306,6 +313,7 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
 
 @media (max-width: 850px) {
   .burger-btn { display: flex; }
+  
   .nav-menu {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
     background-color: var(--bg-main); padding: 100px 30px 30px;
@@ -313,19 +321,6 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
     overflow-y: auto;
   }
   .nav-menu.active { right: 0; }
-  
-  .mobile-close-btn { 
-    display: block !important; 
-    position: absolute; 
-    top: 25px; 
-    right: 25px; 
-    background: transparent; 
-    border: none; 
-    color: var(--text-main); 
-    font-size: 2.5rem; 
-    cursor: pointer; 
-    line-height: 1; 
-  }
   
   .nav-list { flex-direction: column; align-items: flex-start; gap: 20px; width: 100%; }
   .nav-link { font-size: 1.2rem; padding: 10px 0; width: 100%; }
@@ -335,4 +330,8 @@ main { animation: fadeIn 0.4s ease-in-out forwards; }
   .contact-buttons-row { flex-direction: column; }
   .hero-content h1 { font-size: 2.2rem; }
   .legal-content, .contact-card { padding: 30px 20px; }
+  
+  /* На мобильных карточки товаров делаем кнопки на всю ширину */
+  .card-footer { flex-direction: column; align-items: stretch; text-align: center; }
+  .card-footer .price { margin-bottom: 8px; }
 }
