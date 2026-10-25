@@ -3,88 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt &amp; Bestellung | WoodStyle - Individuelle Holzprodukte anfragen</title>
-    <meta name="description" content="Kontaktieren Sie WoodStyle für individuelle Bestellungen, Sonderanfertigungen oder Fragen. Erreichen Sie uns direkt über WhatsApp oder Telegram.">
+    <title>Kontakt &amp; Bestellung | WoodStyle – Individuelle Holzprodukte anfragen</title>
+    <meta name="description" content="Kontaktieren Sie WoodStyle für individuelle Bestellungen, Sonderanfertigungen oder Fragen: per WhatsApp, Telegram, E-Mail oder Telefon.">
+    <meta name="theme-color" content="#1c1917">
+    
+    <link rel="canonical" href="https://woodstyle.de/kontakt.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WoodStyle">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:title" content="Kontakt &amp; Bestellung | WoodStyle – Individuelle Holzprodukte anfragen">
+    <meta property="og:description" content="Kontaktieren Sie WoodStyle für individuelle Bestellungen, Sonderanfertigungen oder Fragen: per WhatsApp, Telegram, E-Mail oder Telefon.">
+    <meta property="og:url" content="https://woodstyle.de/kontakt.html">
+    <meta property="og:image" content="https://woodstyle.de/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
+    <link rel="preload" href="fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
 
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">WoodStyle</a>
+            <a href="index.html" class="logo">
+                <img src="logo-96.webp" alt="" width="40" height="40" class="logo-img">
+                <span>WoodStyle</span>
+            </a>
 
-            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
             </button>
 
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Startseite</a></li>
-                    <li class="dropdown">
-                        <a href="katalog.html" class="nav-link dropdown-toggle" aria-expanded="false">
-                            Katalog ▼
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="katalog.html#schneidebretter">Schneidebretter</a></li>
-                            <li><a href="katalog.html#untersetzer">Untersetzer</a></li>
-                            <li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li>
-                            <li><a href="katalog.html#sonstiges">Sonstiges</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                    <li><a href="versand.html" class="nav-link">Versand &amp; Zahlung</a></li>
-                    <li><a href="kontakt.html" class="nav-link active">Kontakte &amp; Bestellung</a></li>
-                </ul>
-            </nav>
+            <div class="nav-center">
+                <nav class="nav-menu" id="navMenu" aria-label="Hauptnavigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Startseite</a></li><li class="dropdown"><a href="katalog.html" class="nav-link dropdown-toggle" aria-haspopup="true">Katalog</a><ul class="dropdown-menu"><li><a href="katalog.html#schneidebretter">Schneidebretter</a></li><li><a href="katalog.html#untersetzer">Untersetzer</a></li><li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li><li><a href="katalog.html#sonstiges">Sonstiges</a></li></ul></li><li><a href="ueber-uns.html" class="nav-link">Über uns</a></li><li><a href="versand.html" class="nav-link">Versand &amp; Zahlung</a></li><li><a href="kontakt.html" class="nav-link" aria-current="page">Kontakt &amp; Bestellung</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn btn-outline">Anfragen</a>
+            </div>
         </div>
     </header>
 
-    <main class="section">
+    <main id="main">
+        <div class="section">
         <div class="container">
             <div class="contact-wrapper">
-                <h1 class="section-title">Kontakte &amp; Bestellung</h1>
+                <h1 class="section-title">Kontakt &amp; Bestellung</h1>
                 <p class="section-subtitle">Haben Sie Fragen oder möchten Sie ein individuelles Motiv anfragen?</p>
 
                 <div class="contact-card">
-                    <p>
-                        Schreiben Sie uns direkt über Ihren bevorzugten Messenger. Wir besprechen gerne Ihre Wünsche und erstellen ein unverbindliches Angebot.
-                    </p>
+                    <p>Schreiben Sie uns direkt über Ihren bevorzugten Kanal. Wir besprechen gerne Ihre Wünsche und erstellen ein unverbindliches Angebot.</p>
 
                     <div class="contact-buttons-row">
-                        <a href="https://wa.me/4915232161777" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                            Via WhatsApp schreiben
-                        </a>
-                        <a href="https://t.me/woodstyleDE" target="_blank" rel="noopener noreferrer" class="btn btn-telegram">
-                            Via Telegram schreiben
-                        </a>
+                        <a href="https://wa.me/4915232161777" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">Via WhatsApp schreiben</a>
+                        <a href="https://t.me/woodstylede" target="_blank" rel="noopener noreferrer" class="btn btn-telegram">Via Telegram schreiben</a>
                     </div>
 
+                    <ul class="contact-details">
+                        <li>E-Mail: <a href="mailto:woodstylede@gmail.com?subject=Anfrage%20WoodStyle">woodstylede@gmail.com</a></li>
+                        <li>Telefon: <a href="tel:+4915232161777">+49 1523 2161777</a></li>
+                    </ul>
+
+                    <h2 class="checklist-title">Das hilft uns bei Ihrer Anfrage</h2>
+                    <ul class="checklist">
+                        <li>Gewünschtes Produkt und ungefähre Größe</li>
+                        <li>Ihr Motiv oder Foto als Vorlage</li>
+                        <li>Anlass und gewünschter Zeitpunkt</li>
+                    </ul>
+
                     <div class="response-badge">
-                        <span class="response-badge-dot"></span>
+                        <span class="response-badge-dot" aria-hidden="true"></span>
                         <span>Wir antworten in der Regel innerhalb von 2 Stunden</span>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">So läuft Ihre Bestellung ab</h2>
+                <ol class="steps">
+                    <li class="step"><span class="step-num" aria-hidden="true">1</span><h3>Anfrage</h3><p>Schreiben Sie uns Ihr Wunschprodukt und Ihre Idee, gern mit Foto, per WhatsApp, Telegram oder E-Mail.</p></li>
+                    <li class="step"><span class="step-num" aria-hidden="true">2</span><h3>Abstimmung</h3><p>Wir besprechen Ihre Wünsche und erstellen ein unverbindliches Angebot.</p></li>
+                    <li class="step"><span class="step-num" aria-hidden="true">3</span><h3>Zahlung</h3><p>Bezahlen Sie per PayPal oder Banküberweisung. Die Fertigung beginnt nach Zahlungseingang.</p></li>
+                    <li class="step"><span class="step-num" aria-hidden="true">4</span><h3>Fertigung &amp; Versand</h3><p>Ihr Unikat wird von Hand gefertigt und per DHL mit Sendungsverfolgung verschickt.</p></li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
             <p>© 2026 WoodStyle. Alle Rechte vorbehalten.</p>
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Fußzeile">
+                <a href="katalog.html">Katalog</a>
+                <a href="versand.html">Versand &amp; Zahlung</a>
+                <a href="kontakt.html">Kontakt</a>
                 <a href="impressum.html">Impressum</a>
-                <span>|</span>
                 <a href="datenschutz.html">Datenschutz</a>
-            </div>
+            </nav>
+            <p class="footer-note">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
         </div>
     </footer>
 

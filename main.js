@@ -1,98 +1,30 @@
+// Мобильное меню. Переходы между страницами обычные (без SPA):
+// плавность даёт CSS @view-transition, шапка и подвал одинаковы на всех страницах.
 document.addEventListener("DOMContentLoaded", () => {
     const burgerBtn = document.getElementById("burgerBtn");
     const navMenu = document.getElementById("navMenu");
-    
-    function closeMenu() {
-        if (navMenu) navMenu.classList.remove("active");
-        if (burgerBtn) burgerBtn.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = ""; 
+    if (!burgerBtn || !navMenu) return;
+
+    function setMenu(open) {
+        navMenu.classList.toggle("active", open);
+        burgerBtn.setAttribute("aria-expanded", String(open));
+        burgerBtn.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+        document.body.style.overflow = open ? "hidden" : "";
     }
 
-    if (burgerBtn && navMenu) {
-        burgerBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const isActive = navMenu.classList.toggle("active");
-            document.body.style.overflow = isActive ? "hidden" : "";
-            burgerBtn.setAttribute("aria-expanded", String(isActive));
-        });
-    }
+    burgerBtn.addEventListener("click", () => setMenu(!navMenu.classList.contains("active")));
 
-    // SPA: ПЕРЕХОД БЕЗ ПЕРЕЗАГРУЗКИ СТРАНИЦЫ
-    document.body.addEventListener("click", async (e) => {
-        const link = e.target.closest("a");
-        if (!link) return;
-
-        const href = link.getAttribute("href");
-        
-        if (!href || href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel")) return;
-        if (href.startsWith("#")) return;
-
-        const urlParts = href.split("#");
-        const targetPath = urlParts[0];
-        const targetHash = urlParts.length > 1 ? `#${urlParts[1]}` : null;
-
-        const currentPath = window.location.pathname.split("/").pop() || "index.html";
-        if (currentPath === targetPath) {
-            if (targetHash) {
-                const targetEl = document.querySelector(targetHash);
-                if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
-            }
-            closeMenu();
-            return;
-        }
-
-        e.preventDefault();
-
-        try {
-            const response = await fetch(targetPath);
-            if (!response.ok) throw new Error("Page not found");
-            
-            const htmlText = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(htmlText, "text/html");
-            
-            const newMain = doc.querySelector("main").innerHTML;
-            const newTitle = doc.querySelector("title").innerText;
-
-            const currentMain = document.querySelector("main");
-            
-            currentMain.style.opacity = "0";
-            currentMain.style.transform = "translateY(10px)";
-            
-            setTimeout(() => {
-                currentMain.innerHTML = newMain;
-                document.title = newTitle;
-                
-                if (targetHash) {
-                    const targetEl = document.querySelector(targetHash);
-                    if (targetEl) {
-                        targetEl.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-                
-                currentMain.style.opacity = "1";
-                currentMain.style.transform = "translateY(0)";
-            }, 200);
-
-            history.pushState(null, "", href);
-
-            document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
-            const activeLink = document.querySelector(`.nav-link[href^="${targetPath}"]`);
-            if (activeLink) activeLink.classList.add("active");
-
-            closeMenu();
-
-        } catch (error) {
-            console.error("Ошибка навигации:", error);
-            window.location.href = href;
+    // Закрытие: Esc, клик по ссылке, переход на широкий экран
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navMenu.classList.contains("active")) {
+            setMenu(false);
+            burgerBtn.focus();
         }
     });
-
-    window.addEventListener("popstate", () => {
-        window.location.reload();
+    navMenu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) setMenu(false);
+    });
+    window.matchMedia("(min-width: 851px)").addEventListener("change", (e) => {
+        if (e.matches) setMenu(false);
     });
 });

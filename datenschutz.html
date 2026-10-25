@@ -3,105 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz | WoodStyle - Datenschutzerklärung</title>
-    <meta name="description" content="Datenschutzerklärung von WoodStyle - Informationen zur Verarbeitung personenbezogener Daten, Hosting bei GitHub Pages und Ihren Rechten gemäß DSGVO.">
+    <title>Datenschutz | WoodStyle – Datenschutzerklärung</title>
+    <meta name="description" content="Datenschutzerklärung von WoodStyle: Informationen zur Verarbeitung personenbezogener Daten, Hosting bei GitHub Pages und Ihren Rechten gemäß DSGVO.">
+    <meta name="theme-color" content="#1c1917">
+    
+    <link rel="canonical" href="https://woodstyle.de/datenschutz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="WoodStyle">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:title" content="Datenschutz | WoodStyle – Datenschutzerklärung">
+    <meta property="og:description" content="Datenschutzerklärung von WoodStyle: Informationen zur Verarbeitung personenbezogener Daten, Hosting bei GitHub Pages und Ihren Rechten gemäß DSGVO.">
+    <meta property="og:url" content="https://woodstyle.de/datenschutz.html">
+    <meta property="og:image" content="https://woodstyle.de/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicons -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
-    <!-- Styles & Scripts -->
+    <link rel="preload" href="fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
 
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">WoodStyle</a>
+            <a href="index.html" class="logo">
+                <img src="logo-96.webp" alt="" width="40" height="40" class="logo-img">
+                <span>WoodStyle</span>
+            </a>
 
-            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
             </button>
 
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Startseite</a></li>
-                    <li class="dropdown">
-                        <a href="katalog.html" class="nav-link dropdown-toggle" aria-expanded="false">
-                            Katalog ▼
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="katalog.html#schneidebretter">Schneidebretter</a></li>
-                            <li><a href="katalog.html#untersetzer">Untersetzer</a></li>
-                            <li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li>
-                            <li><a href="katalog.html#sonstiges">Sonstiges</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                    <li><a href="versand.html" class="nav-link">Versand &amp; Zahlung</a></li>
-                    <li><a href="kontakt.html" class="nav-link">Kontakte &amp; Bestellung</a></li>
-                </ul>
-            </nav>
+            <div class="nav-center">
+                <nav class="nav-menu" id="navMenu" aria-label="Hauptnavigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Startseite</a></li><li class="dropdown"><a href="katalog.html" class="nav-link dropdown-toggle" aria-haspopup="true">Katalog</a><ul class="dropdown-menu"><li><a href="katalog.html#schneidebretter">Schneidebretter</a></li><li><a href="katalog.html#untersetzer">Untersetzer</a></li><li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li><li><a href="katalog.html#sonstiges">Sonstiges</a></li></ul></li><li><a href="ueber-uns.html" class="nav-link">Über uns</a></li><li><a href="versand.html" class="nav-link">Versand &amp; Zahlung</a></li><li><a href="kontakt.html" class="nav-link">Kontakt &amp; Bestellung</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn btn-outline">Anfragen</a>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="section">
             <div class="container">
-                <h2>Datenschutzerklärung</h2>
+                <h1 class="section-title">Datenschutzerklärung</h1>
 
                 <div class="legal-content">
-                    <h3>1. Datenschutz auf einen Blick</h3>
-                    <h4>Allgemeine Hinweise</h4>
-                    <p>
-                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-                    </p>
+                    <h2>1. Datenschutz auf einen Blick</h2>
+                    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Diese Website verwendet keine Cookies und keine Analyse- oder Tracking-Dienste.</p>
 
-                    <h3>2. Verantwortliche Stelle</h3>
-                    <p>
-                        Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-                    </p>
+                    <h2>2. Verantwortliche Stelle</h2>
+                    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
                     <p>
                         <strong>Olena Perebykivska</strong><br>
                         WoodStyle<br>
                         Bahnhofstraße 11<br>
                         35781 Weilburg<br>
+                        Telefon: +49 1523 2161777<br>
                         E-Mail: woodstylede@gmail.com
                     </p>
 
-                    <h3>3. Datenerfassung auf unserer Website</h3>
-                    <h4>Hosting durch GitHub Pages</h4>
+                    <h2>3. Datenerfassung auf unserer Website</h2>
+                    <h3>Hosting durch GitHub Pages</h3>
                     <p>
-                        Unsere Website wird bei GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA gehostet. Wenn Sie unsere Website besuchen, erfasst GitHub Server-Logfiles (z.B. IP-Adresse, Datum und Uhrzeit des Zugriffs). Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: 
+                        Unsere Website wird bei GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA gehostet. Wenn Sie unsere Website besuchen, erfasst GitHub Server-Logfiles (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp). Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und effizienten Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO). Eine Übermittlung in die USA kann auf Grundlage des EU-US Data Privacy Frameworks bzw. von Standardvertragsklauseln erfolgen. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub:
                         <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
                     </p>
 
-                    <h3>4. Kontaktaufnahme per Messenger (WhatsApp &amp; Telegram)</h3>
+                    <h3>Schriftarten</h3>
+                    <p>Diese Website verwendet lokal eingebundene Schriftarten. Beim Aufruf der Seiten wird keine Verbindung zu Servern von Schriftanbietern wie Google hergestellt.</p>
+
+                    <h2>4. Kontaktaufnahme (Messenger, E-Mail, Telefon)</h2>
                     <p>
-                        Wenn Sie uns per WhatsApp oder Telegram kontaktieren, speichern und verarbeiten wir Ihre übermittelten Daten (z.B. Telefonnummer, Name, übermittelte Fotos) ausschließlich zur Bearbeitung Ihrer Anfrage und zur Durchführung der Bestellung.
+                        Wenn Sie uns per WhatsApp, Telegram, E-Mail oder Telefon kontaktieren, speichern und verarbeiten wir Ihre übermittelten Daten (z. B. Telefonnummer, Name, E-Mail-Adresse, übermittelte Fotos) ausschließlich zur Bearbeitung Ihrer Anfrage und zur Durchführung der Bestellung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen und Vertragserfüllung), im Übrigen unser berechtigtes Interesse an der Beantwortung Ihrer Anfrage (Art. 6 Abs. 1 lit. f DSGVO). Wir speichern Ihre Daten, solange es für die Bearbeitung erforderlich ist; gesetzliche Aufbewahrungsfristen bleiben unberührt. Die Links zu WhatsApp und Telegram auf dieser Website öffnen die jeweilige App bzw. Website des Anbieters; erst dann werden Daten an den Anbieter übermittelt.
                     </p>
 
-                    <h4>WhatsApp</h4>
+                    <h3>WhatsApp</h3>
                     <p>
-                        Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Details zur Datenverarbeitung finden Sie unter: 
+                        Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Details zur Datenverarbeitung finden Sie unter:
                         <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">WhatsApp Datenschutz</a>.
                     </p>
 
-                    <h4>Telegram</h4>
+                    <h3>Telegram</h3>
                     <p>
-                        Anbieter ist die Telegram Messenger Inc. Details zur Datenverarbeitung finden Sie unter: 
+                        Anbieter ist die Telegram Messenger Inc. Details zur Datenverarbeitung finden Sie unter:
                         <a href="https://telegram.org/privacy" target="_blank" rel="noopener noreferrer">Telegram Privacy Policy</a>.
                     </p>
 
-                    <h3>5. Ihre Rechte</h3>
-                    <p>
-                        Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem das Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenden Sie sich hierzu einfach an die im Impressum angegebene Adresse.
-                    </p>
+                    <h2>5. Bestellabwicklung, Versand und Zahlung</h2>
+                    <p>Für die Abwicklung einer Bestellung geben wir die erforderlichen Daten an die beteiligten Dienstleister weiter (Art. 6 Abs. 1 lit. b DSGVO): Ihre Lieferadresse an das Versandunternehmen DHL sowie bei Zahlung per PayPal die für die Zahlungsabwicklung erforderlichen Daten an PayPal. Bei Zahlung per Banküberweisung verarbeiten wir die Zahlungsdaten, die uns Ihr Kreditinstitut übermittelt. Steuer- und handelsrechtliche Aufbewahrungsfristen bleiben unberührt.</p>
+
+                    <h2>6. Ihre Rechte</h2>
+                    <p>Sie haben jederzeit das Recht auf Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie auf Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit. Erteilte Einwilligungen können Sie jederzeit widerrufen, und Sie können der Verarbeitung auf Grundlage berechtigter Interessen widersprechen (Art. 21 DSGVO). Wenden Sie sich hierzu einfach an die im Impressum angegebene Adresse.</p>
+                    <p>Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI), Wiesbaden, <a href="https://datenschutz.hessen.de" target="_blank" rel="noopener noreferrer">datenschutz.hessen.de</a>.</p>
+
+                    <p>Stand: Oktober 2026</p>
 
                     <div class="buttons">
                         <a href="index.html" class="btn btn-outline">← Zurück zur Startseite</a>
@@ -114,11 +122,14 @@
     <footer class="footer">
         <div class="container">
             <p>© 2026 WoodStyle. Alle Rechte vorbehalten.</p>
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Fußzeile">
+                <a href="katalog.html">Katalog</a>
+                <a href="versand.html">Versand &amp; Zahlung</a>
+                <a href="kontakt.html">Kontakt</a>
                 <a href="impressum.html">Impressum</a>
-                <span>|</span>
                 <a href="datenschutz.html">Datenschutz</a>
-            </div>
+            </nav>
+            <p class="footer-note">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
         </div>
     </footer>
 
