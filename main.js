@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function closeMenu() {
         if (navMenu) navMenu.classList.remove("active");
         if (burgerBtn) burgerBtn.setAttribute("aria-expanded", "false");
-        const dropdown = document.querySelector(".dropdown");
-        if (dropdown) dropdown.classList.remove("open");
         document.body.style.overflow = ""; 
     }
 
@@ -16,18 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const isActive = navMenu.classList.toggle("active");
             document.body.style.overflow = isActive ? "hidden" : "";
             burgerBtn.setAttribute("aria-expanded", String(isActive));
-        });
-    }
-
-    // Дропдаун в мобильном меню
-    const dropdownToggle = document.querySelector(".dropdown-toggle");
-    if (dropdownToggle) {
-        dropdownToggle.addEventListener("click", (e) => {
-            if (window.innerWidth <= 850) {
-                e.preventDefault();
-                e.stopPropagation();
-                document.querySelector(".dropdown").classList.toggle("open");
-            }
         });
     }
 
