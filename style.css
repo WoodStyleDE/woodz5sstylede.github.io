@@ -148,6 +148,7 @@ img { max-width: 100%; height: auto; }
   padding: 14px 28px; border-radius: 8px; font-family: var(--font-sans);
   font-weight: 600; font-size: 1rem; text-decoration: none;
   border: 1px solid transparent; cursor: pointer; transition: var(--transition);
+  white-space: nowrap; /* Запрещаем перенос текста на кнопках */
 }
 .btn-primary { background-color: var(--accent-btn); color: #fff; }
 .btn-primary:hover { background-color: var(--accent-btn-hover); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(211,123,82,0.3); }
@@ -219,18 +220,23 @@ img { max-width: 100%; height: auto; }
 .product-card:hover .card-body h3 { color: var(--accent); }
 .card-body p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
 
-/* ИСПРАВЛЕНИЕ: убираем перенос строк, чтобы кнопка всегда была справа от цены на ПК */
+/* ИСПРАВЛЕНИЕ: Цена сверху, кнопка снизу (вертикальный Flexbox) */
 .card-footer { 
   display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  flex-wrap: nowrap; /* Запрещаем перенос */
-  gap: 12px; 
+  flex-direction: column; 
+  align-items: flex-start; /* Выравниваем по левому краю */
+  gap: 16px; /* Отступ между ценой и кнопкой */
   border-top: 1px solid var(--border-color); 
   padding-top: 20px; 
   margin-top: auto; 
 }
-.price { font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.price { 
+  font-family: var(--font-serif); 
+  font-size: 1.3rem; 
+  color: var(--accent); 
+  font-weight: 600; 
+  white-space: nowrap; 
+}
 
 /* ==========================================
    ОСТАЛЬНЫЕ БЛОКИ
@@ -362,14 +368,8 @@ img { max-width: 100%; height: auto; }
   .section-title { font-size: 2rem; }
   .legal-content, .contact-card { padding: 30px 20px; }
 
-  /* На мобильных кнопка под ценой */
-  .card-footer { 
-    flex-direction: column; 
-    align-items: stretch; 
-    text-align: center; 
-    flex-wrap: wrap; /* Возвращаем перенос для мобилок */
-  }
-  .card-footer .price { margin-bottom: 8px; }
+  /* На мобильных цена и кнопка по центру */
+  .card-footer { align-items: center; }
 }
 
 @media (max-width: 560px) {
