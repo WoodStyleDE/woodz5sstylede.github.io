@@ -1,191 +1,262 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="de" class="antialiased">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WoodStyle – Handgefertigte Holzprodukte &amp; Brandmalerei aus Weilburg</title>
-    <meta name="description" content="Handgemachte Brandmalerei und Holzdesign aus Weilburg: Porträts nach Foto, Schneidebretter, Untersetzer und Holzdekorationen als persönliches Geschenk.">
-    <meta name="theme-color" content="#1c1917">
-    
-    <link rel="canonical" href="https://woodstyle.de/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="WoodStyle">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:title" content="WoodStyle – Handgefertigte Holzprodukte &amp; Brandmalerei aus Weilburg">
-    <meta property="og:description" content="Handgemachte Brandmalerei und Holzdesign aus Weilburg: Porträts nach Foto, Schneidebretter, Untersetzer und Holzdekorationen als persönliches Geschenk.">
-    <meta property="og:url" content="https://woodstyle.de/">
-    <meta property="og:image" content="https://woodstyle.de/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <link rel="preload" href="fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "WoodStyle", "description": "Handgefertigte Holzprodukte und individuelle Brandmalerei (Pyrografie): Porträts, Schneidebretter, Untersetzer und Holzdekorationen.", "url": "https://woodstyle.de/", "image": "https://woodstyle.de/og-image.jpg", "email": "woodstylede@gmail.com", "telephone": "+49 1523 2161777", "address": {"@type": "PostalAddress", "streetAddress": "Bahnhofstraße 11", "postalCode": "35781", "addressLocality": "Weilburg", "addressCountry": "DE"}, "areaServed": "DE"}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WoodStyle – Brandmalerei &amp; Holzdesign aus Weilburg</title>
+  <meta name="description" content="Handgemachte Brandmalerei und Holzdesign aus Weilburg: Porträts nach Foto, Schneidebretter, Untersetzer und Holzdekorationen als persönliches Geschenk.">
+  <meta name="theme-color" content="#3a2a20">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"WoodStyle","description":"Handgefertigte Holzprodukte und individuelle Brandmalerei: Porträts, Schneidebretter, Untersetzer und Holzdekorationen.","url":"https://woodstyle.de/","email":"woodstylede@gmail.com","telephone":"+49 1523 2161777","address":{"@type":"PostalAddress","streetAddress":"Bahnhofstraße 11","postalCode":"35781","addressLocality":"Weilburg","addressCountry":"DE"},"areaServed":"DE"}</script>
 </head>
-<body>
-
-    <a href="#main" class="skip-link">Zum Inhalt springen</a>
-    <header class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="logo-96.webp" alt="" width="40" height="40" class="logo-img">
-                <span>WoodStyle</span>
-            </a>
-
-            <button class="burger-btn" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMenu">
-                <span></span><span></span><span></span>
-            </button>
-
-            <div class="nav-center">
-                <nav class="nav-menu" id="navMenu" aria-label="Hauptnavigation">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link" aria-current="page">Startseite</a></li><li class="dropdown"><a href="katalog.html" class="nav-link dropdown-toggle" aria-haspopup="true">Katalog</a><ul class="dropdown-menu"><li><a href="katalog.html#schneidebretter">Schneidebretter</a></li><li><a href="katalog.html#untersetzer">Untersetzer</a></li><li><a href="katalog.html#bilder">Bilder &amp; Porträts</a></li><li><a href="katalog.html#sonstiges">Sonstiges</a></li></ul></li><li><a href="ueber-uns.html" class="nav-link">Über uns</a></li><li><a href="versand.html" class="nav-link">Versand &amp; Zahlung</a></li><li><a href="kontakt.html" class="nav-link">Kontakt &amp; Bestellung</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="nav-cta">
-                <a href="kontakt.html" class="btn btn-outline">Anfragen</a>
-            </div>
+<body class="bg-paper font-sans text-ink">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-ember focus:px-4 focus:py-2 focus:text-paper">Zum Inhalt springen</a>
+  <div class="flex min-h-screen flex-col">
+    <header class="sticky top-0 z-40">
+      <div class="h-0.5 bg-ember" aria-hidden="true"></div>
+      <div class="bg-walnut px-5 py-2 text-center text-sm text-paper">
+        Weihnachten naht — Unikate rechtzeitig <a href="kontakt.html" class="underline decoration-paper/40 underline-offset-4 hover:decoration-paper">anfragen</a>.
+      </div>
+      <div class="border-b border-line bg-paper/90 backdrop-blur-md">
+        <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
+          <a href="index.html" class="flex items-center gap-3" aria-label="WoodStyle, Startseite">
+            <img src="images/logo.webp" alt="" width="40" height="40" class="size-10 rounded-md object-cover">
+            <span class="font-display text-2xl leading-none">WoodStyle</span>
+          </a>
+          <nav class="hidden items-center gap-7 md:flex" aria-label="Hauptnavigation">
+            <a href="index.html" class="text-sm text-ink" aria-current="page">Startseite</a>
+            <a href="katalog.html" class="text-sm text-mute transition-colors hover:text-ink">Katalog</a>
+            <a href="ueber-uns.html" class="text-sm text-mute transition-colors hover:text-ink">Über uns</a>
+            <a href="versand.html" class="text-sm text-mute transition-colors hover:text-ink">Versand</a>
+            <a href="kontakt.html" class="text-sm text-mute transition-colors hover:text-ink">Kontakt</a>
+          </nav>
+          <div class="hidden md:block">
+            <a href="kontakt.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors border border-ink/15 bg-transparent text-ink hover:border-ink/40 px-5">Anfragen</a>
+          </div>
+          <button type="button" id="menu-open" class="inline-flex size-11 items-center justify-center rounded-full border border-line md:hidden" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
         </div>
+      </div>
+      <div id="mobile-menu" class="hidden fixed inset-0 z-50 flex-col bg-paper px-6 pt-5 pb-10" role="dialog" aria-modal="true" aria-label="Seitennavigation">
+        <div class="flex items-center justify-between">
+          <span class="font-display text-2xl">WoodStyle</span>
+          <button type="button" id="menu-close" class="inline-flex size-11 items-center justify-center rounded-full border border-line" aria-label="Menü schließen">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <nav class="mt-12 flex flex-col gap-2" aria-label="Mobilnavigation">
+          <a href="index.html" class="border-b border-line py-3 font-display text-4xl text-ink" aria-current="page">Startseite</a>
+          <a href="katalog.html" class="border-b border-line py-3 font-display text-4xl text-mute">Katalog</a>
+          <a href="ueber-uns.html" class="border-b border-line py-3 font-display text-4xl text-mute">Über uns</a>
+          <a href="versand.html" class="border-b border-line py-3 font-display text-4xl text-mute">Versand</a>
+          <a href="kontakt.html" class="border-b border-line py-3 font-display text-4xl text-mute">Kontakt</a>
+        </nav>
+        <div class="mt-auto">
+          <a href="kontakt.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-ember text-paper hover:bg-ember-deep w-full">Anfrage starten</a>
+        </div>
+      </div>
     </header>
+    <main id="main" class="flex-1 pb-20 md:pb-0">
 
-    <main id="main">
-        <div class="promo-strip">Weihnachten naht: Individuelle Holzgeschenke jetzt rechtzeitig <a href="kontakt.html">anfragen</a>.</div>
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="hero-subtitle">Handgefertigt in Deutschland</span>
-                    <h1>Handgemachte Brandmalerei &amp; Holzdesign</h1>
-                    <p>Einzigartige Porträts, Schneidebretter und Dekorationen mit Einbrennmotiv – das perfekte persönliche Geschenk.</p>
-                    <div class="hero-buttons">
-                        <a href="katalog.html" class="btn btn-primary">Katalog ansehen</a>
-                        <a href="kontakt.html" class="btn btn-outline">Individuelle Anfrage</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <img src="hero.webp" alt="WoodStyle: Flamme als Brandmalerei auf dunklem Holz" width="512" height="512" class="hero-img" fetchpriority="high">
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">Der Katalog</h2>
-                <p class="section-subtitle">Vier Richtungen. Jedes Stück entsteht nach Absprache und wird individuell für Sie gefertigt.</p>
-                <div class="catalog-grid">
-                <article class="product-card">
-                    <div class="card-img-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg></div>
-                    <div class="card-body">
-                        <h3>Schneidebretter</h3>
-                        <div class="card-footer">
-                            <span class="price">ab 25 €</span>
-                            <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Schneidebretter." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" aria-label="Schneidebretter anfragen (WhatsApp)">Jetzt anfragen</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg></div>
-                    <div class="card-body">
-                        <h3>Untersetzer</h3>
-                        <div class="card-footer">
-                            <span class="price">ab 15 €</span>
-                            <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Untersetzer." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" aria-label="Untersetzer anfragen (WhatsApp)">Jetzt anfragen</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg></div>
-                    <div class="card-body">
-                        <h3>Bilder &amp; Porträts</h3>
-                        <div class="card-footer">
-                            <span class="price">ab 45 €</span>
-                            <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Brandmalerei." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" aria-label="Bilder & Porträts anfragen (WhatsApp)">Jetzt anfragen</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="product-card">
-                    <div class="card-img-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg></div>
-                    <div class="card-body">
-                        <h3>Sonstiges</h3>
-                        <div class="card-footer">
-                            <span class="price">ab 10 €</span>
-                            <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Holzdekorationen." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" aria-label="Sonstiges anfragen (WhatsApp)">Jetzt anfragen</a>
-                        </div>
-                    </div>
-                </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Warum WoodStyle</h2>
-                <div class="benefits-grid mt">
-                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 12h2L12 2 5.05 12H7l-3.9 6h6.92v4h3.96v-4H21z"/></svg></div><h3>100% Massivholz</h3><p>Nur ausgewählte, natürliche Hölzer bester Qualität.</p></div>
-                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div><h3>Handgemacht</h3><p>Jedes Detail wird von Hand gefertigt und eingebrannt.</p></div>
-                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"/></svg></div><h3>Einzigartig</h3><p>Ein unvergessliches Unikat für Ihre Liebsten.</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">So läuft Ihre Bestellung ab</h2>
-                <p class="section-subtitle">Von der ersten Idee bis zum fertigen Unikat in vier Schritten.</p>
-                <ol class="steps">
-                    <li class="step"><span class="step-num" aria-hidden="true">1</span><h3>Anfrage</h3><p>Schreiben Sie uns Ihr Wunschprodukt und Ihre Idee, gern mit Foto, per WhatsApp, Telegram oder E-Mail.</p></li>
-                    <li class="step"><span class="step-num" aria-hidden="true">2</span><h3>Abstimmung</h3><p>Wir besprechen Ihre Wünsche und erstellen ein unverbindliches Angebot.</p></li>
-                    <li class="step"><span class="step-num" aria-hidden="true">3</span><h3>Zahlung</h3><p>Bezahlen Sie per PayPal oder Banküberweisung. Die Fertigung beginnt nach Zahlungseingang.</p></li>
-                    <li class="step"><span class="step-num" aria-hidden="true">4</span><h3>Fertigung &amp; Versand</h3><p>Ihr Unikat wird von Hand gefertigt und per DHL mit Sendungsverfolgung verschickt.</p></li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <h2 class="section-title">Individuelle Bestellung &amp; Kontakt</h2>
-                    <p class="section-subtitle">Möchten Sie eine Sonderanfertigung oder haben Sie Fragen? Schreiben Sie uns direkt über WhatsApp, Telegram oder E-Mail.</p>
-
-                    <div class="contact-card">
-                        <p>Schreiben Sie uns direkt über Ihren bevorzugten Kanal. Wir besprechen gerne Ihre Wünsche und erstellen ein unverbindliches Angebot.</p>
-                        <div class="contact-buttons-row">
-                            <a href="https://wa.me/4915232161777" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">Via WhatsApp schreiben</a>
-                            <a href="https://t.me/woodstylede" target="_blank" rel="noopener noreferrer" class="btn btn-telegram">Via Telegram schreiben</a>
-                            <a href="mailto:woodstylede@gmail.com?subject=Anfrage%20WoodStyle" class="btn btn-outline">Per E-Mail</a>
-                        </div>
-                        <div class="response-badge">
-                            <span class="response-badge-dot" aria-hidden="true"></span>
-                            <span>Wir antworten in der Regel innerhalb von 2 Stunden</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 WoodStyle. Alle Rechte vorbehalten.</p>
-            <nav class="footer-links" aria-label="Fußzeile">
-                <a href="katalog.html">Katalog</a>
-                <a href="versand.html">Versand &amp; Zahlung</a>
-                <a href="kontakt.html">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </nav>
-            <p class="footer-note">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
+      <section class="mx-auto grid max-w-6xl items-end gap-10 px-5 pt-10 pb-14 md:px-8 lg:grid-cols-12 lg:pt-16 lg:pb-20">
+        <div class="lg:col-span-5">
+          <p class="text-xs font-medium tracking-kicker text-ember uppercase">Atelier in Weilburg</p>
+          <h1 class="mt-4 font-display text-hero">Eingebrannt,<span class="italic text-ember"> nicht gedruckt.</span></h1>
+          <p class="mt-6 max-w-md text-lg text-mute">Porträts nach Ihrem Foto, Schneidebretter und kleine Holzstücke. In Weilburg von Hand gefertigt — jedes Motiv ein Unikat.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="katalog.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-ember text-paper hover:bg-ember-deep">Katalog ansehen</a>
+            <a href="kontakt.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors border border-ink/15 bg-transparent text-ink hover:border-ink/40">Motiv anfragen</a>
+          </div>
+          <p class="mt-8 text-sm text-mute">Handarbeit · PayPal oder Überweisung · DHL mit Sendungsverfolgung</p>
         </div>
+        <figure class="lg:col-span-7">
+          <div class="overflow-hidden rounded-xl">
+            <img src="images/hero.jpg" alt="Hände führen einen Brennstift über eine helle Holztafel in der Werkstatt" width="1600" height="1067" fetchpriority="high" class="aspect-3/2 w-full object-cover">
+          </div>
+          <figcaption class="mt-3 flex items-center justify-between text-xs tracking-kicker text-mute uppercase"><span>Pyrografie · Werkbank</span><span>Weilburg</span></figcaption>
+        </figure>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track flex w-max"><div class="flex"><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Brandmalerei<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Massivholz<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Unikate<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Weilburg<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Nach Foto<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">DHL Versand<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">PayPal<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Überweisung<span class="ml-5 text-ember">·</span></span></div><div class="marquee-clone flex"><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Brandmalerei<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Massivholz<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Unikate<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Weilburg<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Nach Foto<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">DHL Versand<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">PayPal<span class="ml-5 text-ember">·</span></span><span class="px-5 py-3.5 text-xs font-medium tracking-kicker text-mute uppercase">Überweisung<span class="ml-5 text-ember">·</span></span></div></div>
+      </div>
+
+      <section class="bg-sand">
+        <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p class="text-xs font-medium tracking-kicker text-ember uppercase">01 — Katalog</p>
+              <h2 class="mt-3 font-display text-section">Vier Richtungen, ein Brennstift</h2>
+            </div>
+            <a href="katalog.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-transparent px-0 text-ink underline decoration-ink/25 underline-offset-4 hover:text-ember hover:decoration-ember px-0">Alles im Katalog</a>
+          </div>
+
+          <article class="mt-12 grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
+            <a href="katalog.html#bilder" class="group overflow-hidden rounded-xl lg:col-span-7">
+              <img src="images/portrait.jpg" alt="Brandmalerei eines Hundes auf einer hellen Holztafel, an eine warme Wand gelehnt" width="900" height="1200" class="aspect-3/4 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:aspect-4/5">
+            </a>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-medium tracking-kicker text-ember uppercase">Signatur</p>
+              <h3 class="mt-3 font-display text-4xl">Bilder &amp; Porträts</h3>
+              <p class="mt-4 text-lg text-mute">Ein Gesicht, ein Tier, ein Moment — mit dem Brennstift nach Ihrer Fotovorlage ins Holz gelegt.</p>
+              <p class="mt-6 font-display text-3xl text-ember">ab 45 €</p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Brandmalerei." class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-ember text-paper hover:bg-ember-deep" target="_blank" rel="noopener noreferrer">Per WhatsApp anfragen</a>
+                <a href="katalog.html#bilder" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors border border-ink/15 bg-transparent text-ink hover:border-ink/40">Mehr dazu</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="mt-14 grid gap-10 md:grid-cols-3">
+            <article>
+              <a href="katalog.html#schneidebretter" class="group block overflow-hidden rounded-xl">
+                <img src="images/board.jpg" alt="Massives Eichen-Schneidebrett mit eingebranntem Olivenzweig auf einem Walnusstisch" width="1400" height="1050" loading="lazy" class="aspect-4/3 w-full object-cover transition-transform duration-700 group-hover:scale-105">
+              </a>
+              <p class="mt-4 text-xs font-medium tracking-kicker text-ember uppercase">Für die Küche</p>
+              <h3 class="mt-2 font-display text-2xl"><a href="katalog.html#schneidebretter" class="hover:text-ember">Schneidebretter</a></h3>
+              <p class="mt-2 text-sm text-mute">Dicke Bretter aus Hartholz, mit einem Motiv, das zum Stück gehört und im Alltag bleibt.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-2xl text-ember">ab 25 €</span>
+                <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Schneidebretter." class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-transparent px-0 text-ink underline decoration-ink/25 underline-offset-4 hover:text-ember hover:decoration-ember px-0" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </article>
+            <article>
+              <a href="katalog.html#untersetzer" class="group block overflow-hidden rounded-xl">
+                <img src="images/coasters.jpg" alt="Vier runde Walnuss-Untersetzer mit eingebrannten Jahresringen auf Leinen" width="1400" height="1050" loading="lazy" class="aspect-4/3 w-full object-cover transition-transform duration-700 group-hover:scale-105">
+              </a>
+              <p class="mt-4 text-xs font-medium tracking-kicker text-ember uppercase">Für den Tisch</p>
+              <h3 class="mt-2 font-display text-2xl"><a href="katalog.html#untersetzer" class="hover:text-ember">Untersetzer</a></h3>
+              <p class="mt-2 text-sm text-mute">Runde Holzscheiben mit feiner Gravur — einzeln oder als Satz, ruhig und griffig.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-2xl text-ember">ab 15 €</span>
+                <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Untersetzer." class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-transparent px-0 text-ink underline decoration-ink/25 underline-offset-4 hover:text-ember hover:decoration-ember px-0" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </article>
+            <article>
+              <a href="katalog.html#sonstiges" class="group block overflow-hidden rounded-xl">
+                <img src="images/gifts.jpg" alt="Kleine Holzgeschenke mit Brandmalerei auf einer Werkbank: Scheibe, Anhänger und Herz" width="1400" height="1050" loading="lazy" class="aspect-4/3 w-full object-cover transition-transform duration-700 group-hover:scale-105">
+              </a>
+              <p class="mt-4 text-xs font-medium tracking-kicker text-ember uppercase">Kleine Stücke</p>
+              <h3 class="mt-2 font-display text-2xl"><a href="katalog.html#sonstiges" class="hover:text-ember">Sonstiges</a></h3>
+              <p class="mt-2 text-sm text-mute">Anhänger, Holzscheiben, kleine Zeichen — wenn das Geschenk in die Handfläche passen soll.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-2xl text-ember">ab 10 €</span>
+                <a href="https://wa.me/4915232161777?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Holzdekorationen." class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-transparent px-0 text-ink underline decoration-ink/25 underline-offset-4 hover:text-ember hover:decoration-ember px-0" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </article>
+          </div>
+          <p class="mt-12 text-center text-xs text-mute">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
+        </div>
+      </section>
+
+      <section class="bg-walnut text-paper">
+        <div class="mx-auto grid max-w-6xl md:grid-cols-3">
+          <div class="border-t border-paper/15 px-5 py-12 md:border-t-0 md:border-l md:px-8 md:first:border-l-0">
+            <p class="font-display text-4xl text-sand">01</p>
+            <h2 class="mt-4 font-display text-3xl">Massivholz</h2>
+            <p class="mt-3 text-paper/75">Nur ausgewählte, natürliche Hölzer — die Maserung bleibt sichtbar und gehört zum Bild.</p>
+          </div>
+          <div class="border-t border-paper/15 px-5 py-12 md:border-t-0 md:border-l md:px-8 md:first:border-l-0">
+            <p class="font-display text-4xl text-sand">02</p>
+            <h2 class="mt-4 font-display text-3xl">Von Hand</h2>
+            <p class="mt-3 text-paper/75">Jedes Detail wird gefertigt und mit dem Brennstift eingebrannt, nicht aufgedruckt.</p>
+          </div>
+          <div class="border-t border-paper/15 px-5 py-12 md:border-t-0 md:border-l md:px-8 md:first:border-l-0">
+            <p class="font-display text-4xl text-sand">03</p>
+            <h2 class="mt-4 font-display text-3xl">Ein Unikat</h2>
+            <p class="mt-3 text-paper/75">Kein zweites Stück fällt gleich aus. Deshalb eignet es sich als Geschenk, das man behält.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+        <p class="text-xs font-medium tracking-kicker text-ember uppercase">02 — Ablauf</p>
+        <h2 class="mt-3 max-w-xl font-display text-section">Von der Idee bis zur Sendung</h2>
+        <ol class="mt-12 grid gap-10 md:grid-cols-4">
+          <li>
+            <span class="font-display text-4xl text-ember">01</span>
+            <h3 class="mt-3 font-display text-2xl">Anfrage</h3>
+            <p class="mt-2 text-sm text-mute">Schreiben Sie uns Produkt und Idee, gern mit Foto — per WhatsApp, Telegram oder E-Mail.</p>
+          </li>
+          <li>
+            <span class="font-display text-4xl text-ember">02</span>
+            <h3 class="mt-3 font-display text-2xl">Abstimmung</h3>
+            <p class="mt-2 text-sm text-mute">Wir besprechen Motiv, Holz und Größe und schicken ein unverbindliches Angebot.</p>
+          </li>
+          <li>
+            <span class="font-display text-4xl text-ember">03</span>
+            <h3 class="mt-3 font-display text-2xl">Zahlung</h3>
+            <p class="mt-2 text-sm text-mute">Per PayPal oder Banküberweisung. Die Fertigung beginnt nach Zahlungseingang.</p>
+          </li>
+          <li>
+            <span class="font-display text-4xl text-ember">04</span>
+            <h3 class="mt-3 font-display text-2xl">Fertigung &amp; Versand</h3>
+            <p class="mt-2 text-sm text-mute">Ihr Unikat entsteht von Hand und geht per DHL mit Sendungsverfolgung auf den Weg.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 pb-16 md:px-8 md:pb-24">
+        <div class="relative">
+          <img src="images/atelier.jpg" alt="Ruhige Werkstatt mit gestapelten Holzbrettern und Nachmittagslicht" width="1600" height="1067" loading="lazy" class="aspect-video w-full rounded-xl object-cover">
+          <div class="relative z-10 -mt-16 ml-4 max-w-md rounded-xl bg-paper p-6 shadow-lift md:absolute md:right-8 md:bottom-8 md:left-auto md:mt-0 md:ml-0">
+            <p class="text-xs font-medium tracking-kicker text-ember uppercase">Das Atelier</p>
+            <h2 class="mt-2 font-display text-3xl">Wo das Holz noch warm wird</h2>
+            <p class="mt-3 text-mute">Kein Lager, keine Serie. Ein Motiv, ein Stück Holz, und die Zeit, die der Brennstift braucht.</p>
+            <a href="ueber-uns.html" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-transparent px-0 text-ink underline decoration-ink/25 underline-offset-4 hover:text-ember hover:decoration-ember mt-4 px-0">Über WoodStyle</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-line">
+        <div class="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-16 md:flex-row md:items-end md:justify-between md:px-8 md:py-20">
+          <div>
+            <p class="text-xs font-medium tracking-kicker text-ember uppercase">03 — Kontakt</p>
+            <h2 class="mt-3 max-w-xl font-display text-section">Schicken Sie uns das Motiv.</h2>
+            <p class="mt-4 max-w-md text-mute">WhatsApp, Telegram oder E-Mail. Wir antworten in der Regel innerhalb von zwei Stunden.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/4915232161777" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors bg-ember text-paper hover:bg-ember-deep" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://t.me/woodstylede" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors border border-ink/15 bg-transparent text-ink hover:border-ink/40" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="mailto:woodstylede@gmail.com?subject=Anfrage%20WoodStyle" class="inline-flex min-h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors border border-ink/15 bg-transparent text-ink hover:border-ink/40">E-Mail</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-line bg-paper">
+      <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+        <div>
+          <p class="font-display text-3xl">WoodStyle</p>
+          <p class="mt-3 max-w-xs text-sm text-mute">Handgefertigte Brandmalerei und Holzdesign aus Weilburg.</p>
+        </div>
+        <nav aria-label="Fußzeile" class="flex flex-col gap-2 text-sm">
+          <a href="katalog.html" class="text-mute hover:text-ink">Katalog</a>
+          <a href="ueber-uns.html" class="text-mute hover:text-ink">Über uns</a>
+          <a href="versand.html" class="text-mute hover:text-ink">Versand &amp; Zahlung</a>
+          <a href="kontakt.html" class="text-mute hover:text-ink">Kontakt</a>
+          <a href="impressum.html" class="text-mute hover:text-ink">Impressum</a>
+          <a href="datenschutz.html" class="text-mute hover:text-ink">Datenschutz</a>
+        </nav>
+        <address class="text-sm text-mute not-italic">
+          <p class="text-ink">Olena Perebykivska</p>
+          <p class="mt-2">Bahnhofstraße 11<br>35781 Weilburg</p>
+          <p class="mt-3">
+            <a class="hover:text-ember" href="tel:+4915232161777">+49 1523 2161777</a><br>
+            <a class="hover:text-ember" href="mailto:woodstylede@gmail.com">woodstylede@gmail.com</a>
+          </p>
+        </address>
+      </div>
+      <div class="border-t border-line">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-mute md:flex-row md:justify-between md:px-8">
+          <p>© 2026 WoodStyle. Alle Rechte vorbehalten.</p>
+          <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
+        </div>
+      </div>
     </footer>
-
-    <a href="https://wa.me/4915232161777" class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WoodStyle per WhatsApp anschreiben"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Anfragen</span></a>
-
+    <a href="https://wa.me/4915232161777" target="_blank" rel="noopener noreferrer" class="fixed right-4 bottom-4 z-30 inline-flex min-h-11 items-center gap-2 rounded-full bg-ember px-4 text-sm font-medium text-paper shadow-lift md:hidden">Anfragen</a>
+  </div>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
